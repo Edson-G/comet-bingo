@@ -1,51 +1,60 @@
 import "./App.css";
 import Itemize from "itemizejs";
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import bingoData from "./data.js";
 
 function App() {
   const bingoRef = useRef();
-  const listRef = useRef();
-  const bingo = useRef();
-  const list = useRef();
+  const bingo = useRef([...bingoData]);
+  const list = useRef([...bingoData]);
 
-  bingo.current = bingoData;
-  list.current = bingoData;
+  const [x, setX] = useState([...bingo.current]);
+
+  const bingoManager = new Itemize();
+  const listManager = new Itemize();
 
   useEffect(() => {
-    const itemManager = new Itemize();
-    itemManager.apply(".bingo-container", { dragAndDrop: true });
-    itemManager.apply(".list-container", { dragAndDrop: true });
-  }, []);
-
+    bingoManager.apply(".bingo-container", { dragAndDrop: true });
+    listManager.apply(".list-container", { dragAndDrop: true });
+  });
+  useEffect(() => {
+    console.log(x);
+  }, [x]);
   const updateBingo = () => {
     const bingoItems = [...bingoRef.current.children];
+    setX(Math.random());
     if (bingoItems.length > 0) {
       bingoItems.pop();
       bingo.current = [...bingoItems].map((child) => {
-        return { name: child.children[0].alt, url: child.children[0].src };
+        return {
+          name: child.children[0].alt,
+          url: child.children[0].src,
+          personalRank: child.children[0].rank,
+        };
       });
     }
-    console.log(bingo.current);
   };
 
   const updateList = () => {
-    const listItems = [...listRef.current.children];
+    const listItems = [...listManager.containers[0].children];
     if (listItems.length > 0) {
       listItems.pop();
-      list.current = [...listItems].map((child) => {
-        return { name: child.children[0].alt, url: child.children[0].src };
+      list.current = [...listItems].map((child, index) => {
+        return {
+          name: child.children[1].alt,
+          url: child.children[1].src,
+          personalRank: index + 1,
+        };
       });
     }
-    console.log(list.current);
+    setX(list.current);
   };
   return (
     <div className="content">
       <div
         ref={bingoRef}
         className="bingo-container"
-        onMouseOver={(e) => {
-          e.preventDefault();
+        onDrop={(e) => {
           updateBingo();
         }}
       >
@@ -59,6 +68,7 @@ function App() {
               className="bingo-image"
               src={item.url}
               alt={item.name}
+              rank={item.personalRank}
               onDragStart={(e) => e.preventDefault()}
             />
           </div>
@@ -66,29 +76,29 @@ function App() {
       </div>
 
       <div
-        ref={listRef}
         className="list-container"
-        onMouseOver={(e) => {
-          e.preventDefault();
+        onDrop={(e) => {
           updateList();
         }}
       >
-        {list.current.map((item, index) => (
-          <div
-            key={`list-item-${index}`}
-            className="item list-item"
-            onDragStart={(e) => e.preventDefault()}
-          >
-            <div className="list-item-rank">{index + 1}</div>
-            <img
-              className="list-image"
-              src={item.url}
-              alt={item.name}
+        {list.current
+          .sort((a, b) => a.personalRank - b.personalRank)
+          .map((item, index) => (
+            <div
+              key={`list-item-${index}`}
+              className="item list-item"
               onDragStart={(e) => e.preventDefault()}
-            />
-            <div className="list-item-name">{item.name}</div>
-          </div>
-        ))}
+            >
+              <div className="list-item-rank">{item.personalRank}</div>
+              <img
+                className="list-image"
+                src={item.url}
+                alt={item.name}
+                onDragStart={(e) => e.preventDefault()}
+              />
+              <div className="list-item-name">{item.name}</div>
+            </div>
+          ))}
       </div>
     </div>
   );
