@@ -1,0 +1,20 @@
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.bingo-div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 850px) {
+  .bingo-div {
+    width: auto;
+    flex-direction: column;
+  }
+}

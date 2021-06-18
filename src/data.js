@@ -126,7 +126,7 @@ export const hololiveData = [
   },
 ];
 
-export const animeData = [
+export const edsonData = [
   {
     name: "Azusa Nakano",
     url: "https://myanimelist.net/images/characters/15/86736.webp",
