@@ -1,28 +1,21 @@
 import "./App.css";
 import Itemize from "itemizejs";
-import { useState, useEffect, useRef } from "react";
-import bingoData from "./data.js";
+import { useEffect, useRef } from "react";
+import { hololiveData, animeData } from "./data.js";
 
 function App() {
   const bingoRef = useRef();
-  const bingo = useRef([...bingoData]);
-  const list = useRef([...bingoData]);
-
-  const [x, setX] = useState([...bingo.current]);
+  const bingo = useRef([...animeData]);
+  const list = useRef([...animeData]);
 
   const bingoManager = new Itemize();
   const listManager = new Itemize();
 
   useEffect(() => {
     bingoManager.apply(".bingo-container", { dragAndDrop: true });
-    listManager.apply(".list-container", { dragAndDrop: true });
   });
-  useEffect(() => {
-    console.log(x);
-  }, [x]);
   const updateBingo = () => {
     const bingoItems = [...bingoRef.current.children];
-    setX(Math.random());
     if (bingoItems.length > 0) {
       bingoItems.pop();
       bingo.current = [...bingoItems].map((child) => {
@@ -47,7 +40,6 @@ function App() {
         };
       });
     }
-    setX(list.current);
   };
   return (
     <div className="content">

@@ -1,4 +1,4 @@
-const bingoData = [
+export const hololiveData = [
   {
     name: "Hoshimachi Suisei",
     url: "https://i.ppy.sh/6b06654e2cf47c2f17c58cdec201a97491442dbb/68747470733a2f2f692e696d6775722e636f6d2f345170684333562e676966",
@@ -126,4 +126,130 @@ const bingoData = [
   },
 ];
 
-export default bingoData;
+export const animeData = [
+  {
+    name: "Azusa Nakano",
+    url: "https://myanimelist.net/images/characters/15/86736.webp",
+    personalRank: 11,
+  },
+  {
+    name: "Himeko Inaba",
+    url: "https://cdn.myanimelist.net/images/characters/12/172239.jpg",
+    personalRank: 7,
+  },
+  {
+    name: "Megumi Tadokoro",
+    url: "https://cdn.myanimelist.net/images/characters/8/219475.webp",
+    personalRank: 20,
+  },
+  {
+    name: "Hasuki Komai",
+    url: "https://cdn.myanimelist.net/images/characters/10/435953.jpg",
+    personalRank: 25,
+  },
+  {
+    name: "Katarina Claes",
+    url: "https://cdn.myanimelist.net/images/characters/15/405615.jpg",
+    personalRank: 6,
+  },
+  {
+    name: "Ruiko Saten",
+    url: "https://cdn.myanimelist.net/images/characters/13/405744.jpg",
+    personalRank: 12,
+  },
+  {
+    name: "Mai Sakurajima",
+    url: "https://cdn.myanimelist.net/images/characters/2/366639.jpg",
+    personalRank: 9,
+  },
+  {
+    name: "Iroha Isshiki",
+    url: "https://cdn.myanimelist.net/images/characters/8/320273.jpg",
+    personalRank: 8,
+  },
+  {
+    name: "Tsubasa Hanekawa",
+    url: "https://cdn.myanimelist.net/images/characters/7/105363.jpg",
+    personalRank: 5,
+  },
+  {
+    name: "Momo Belia Deviluke",
+    url: "https://cdn.myanimelist.net/images/characters/10/273355.webp",
+    personalRank: 10,
+  },
+  {
+    name: "Kosaki Onodera",
+    url: "https://cdn.myanimelist.net/images/characters/9/241653.jpg",
+    personalRank: 13,
+  },
+  {
+    name: "Hoshimachi Suisei",
+    url: "https://static.zerochan.net/Hoshimachi.Suisei.full.3208737.jpg",
+    personalRank: 1,
+  },
+  {
+    name: "Emilia",
+    url: "https://cdn.myanimelist.net/images/characters/10/268173.jpg",
+    personalRank: 3,
+  },
+  {
+    name: "Endorsi Jahad",
+    url: "https://cdn.myanimelist.net/images/characters/6/407591.jpg",
+    personalRank: 15,
+  },
+  {
+    name: "Kokomi Teruhashi",
+    url: "https://cdn.myanimelist.net/images/characters/2/311291.webp",
+    personalRank: 21,
+  },
+  {
+    name: "Aguri",
+    url: "https://cdn.myanimelist.net/images/characters/7/330153.jpg",
+    personalRank: 18,
+  },
+  {
+    name: "Megumin",
+    url: "https://cdn.myanimelist.net/images/characters/14/349249.jpg",
+    personalRank: 17,
+  },
+  {
+    name: "Hifumi Takimoto",
+    url: "https://cdn.myanimelist.net/images/characters/8/311602.jpg",
+    personalRank: 2,
+  },
+  {
+    name: "Shouko Nishimiya",
+    url: "https://cdn.myanimelist.net/images/characters/5/302315.jpg",
+    personalRank: 14,
+  },
+  {
+    name: "Yuzuki Shiraishi",
+    url: "https://cdn.myanimelist.net/images/characters/3/345984.webp",
+    personalRank: 19,
+  },
+  {
+    name: "Kumiko Oumae",
+    url: "https://cdn.myanimelist.net/images/characters/9/354297.jpg",
+    personalRank: 16,
+  },
+  {
+    name: "Karyl",
+    url: "https://cdn.myanimelist.net/images/characters/13/405831.jpg",
+    personalRank: 22,
+  },
+  {
+    name: "Nanami Aoyama",
+    url: "https://cdn.myanimelist.net/images/characters/3/198775.webp",
+    personalRank: 4,
+  },
+  {
+    name: "Fumino Furuhashi",
+    url: "https://cdn.myanimelist.net/images/characters/9/363075.jpg",
+    personalRank: 23,
+  },
+  {
+    name: "Eru Chitanda",
+    url: "https://cdn.myanimelist.net/images/characters/2/175599.jpg",
+    personalRank: 24,
+  },
+];
