@@ -20,7 +20,7 @@
   border: 2px solid black;
 }
 .bingo-item-dead {
-  opacity: 50%;
+  filter: opacity(50%);
 }
 .bingo-image {
   width: 100%;
