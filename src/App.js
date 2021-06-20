@@ -14,7 +14,7 @@ function App() {
         bracketService.results(),
         bracketService.currentRound(),
       ]).then((res) => {
-        setBracketData(res);
+        setBracketData([res[0], parseInt(res[1])]);
         setLoading(false);
       }),
     []

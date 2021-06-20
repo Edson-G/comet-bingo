@@ -2,10 +2,35 @@ import "./styles.css";
 import Bingo from "../components/Bingo";
 import List from "../components/List";
 import Score from "../components/Score";
+import extractWinners from "../helpers/extractWinners";
+import findWaifuRound from "../helpers/findWaifuRound";
 function App({ person, data, loading, results, currentRound, ...props }) {
-  console.log(results);
   console.log(currentRound);
-  console.log(loading);
+  const winners = results ? extractWinners(results) : [];
+
+  const newWaifuData = data.map((waifu) => {
+    return {
+      ...waifu,
+      round: findWaifuRound(waifu.id, winners),
+    };
+  });
+
+  const finalWaifuData = newWaifuData.map((waifu) => {
+    console.log(
+      waifu.name,
+      waifu.id,
+      waifu.round >= parseInt(currentRound) ||
+        (currentRound === 1 && waifu.id !== 0)
+    );
+
+    return {
+      ...waifu,
+      status:
+        waifu.round >= currentRound || (currentRound === 1 && waifu.id !== 0),
+    };
+  });
+
+  console.log(finalWaifuData);
   return (
     <>
       {!loading ? (
@@ -13,7 +38,7 @@ function App({ person, data, loading, results, currentRound, ...props }) {
           <div className="bingo-div">
             <div>
               <h1>Bingo de {person}</h1>
-              <Bingo data={[...data]} />
+              <Bingo data={[...finalWaifuData]} />
             </div>
             <div>
               <h1>Pontuação</h1>
@@ -22,7 +47,7 @@ function App({ person, data, loading, results, currentRound, ...props }) {
           </div>
           <div>
             <h1>Top 25</h1>
-            <List data={[...data]} />
+            <List data={[...finalWaifuData]} />
           </div>
         </div>
       ) : (
