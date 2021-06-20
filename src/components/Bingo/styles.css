@@ -12,13 +12,15 @@
   transition: 0.5s;
 }
 .bingo-item {
-  display: block;
-  width: 20%;
-  height: 20%;
   background-color: black;
-  outline-color: black;
-  outline-style: solid;
-  outline-width: 2px;
+  display: block;
+  position: relative;
+  width: calc(20% - 4px);
+  height: calc(20% - 4px);
+  border: 2px solid black;
+}
+.bingo-item-dead {
+  opacity: 50%;
 }
 .bingo-image {
   width: 100%;

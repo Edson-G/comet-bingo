@@ -5,7 +5,6 @@ import Score from "../components/Score";
 import extractWinners from "../helpers/extractWinners";
 import findWaifuRound from "../helpers/findWaifuRound";
 function App({ person, data, loading, results, currentRound, ...props }) {
-  console.log(currentRound);
   const winners = results ? extractWinners(results) : [];
 
   const newWaifuData = data.map((waifu) => {
@@ -16,13 +15,6 @@ function App({ person, data, loading, results, currentRound, ...props }) {
   });
 
   const finalWaifuData = newWaifuData.map((waifu) => {
-    console.log(
-      waifu.name,
-      waifu.id,
-      waifu.round >= parseInt(currentRound) ||
-        (currentRound === 1 && waifu.id !== 0)
-    );
-
     return {
       ...waifu,
       status:
@@ -30,7 +22,6 @@ function App({ person, data, loading, results, currentRound, ...props }) {
     };
   });
 
-  console.log(finalWaifuData);
   return (
     <>
       {!loading ? (
