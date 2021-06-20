@@ -128,6 +128,7 @@ export const hololiveData = [
 
 export const edsonData = [
   {
+    id: 217718,
     name: "Azusa Nakano",
     url: "https://myanimelist.net/images/characters/15/86736.webp",
     personalRank: 11,
