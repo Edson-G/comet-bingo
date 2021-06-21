@@ -6,14 +6,14 @@ import extractWinners from "../helpers/extractWinners";
 import findWaifuRound from "../helpers/findWaifuRound";
 function App({ person, data, loading, results, currentRound, ...props }) {
   const winners = results ? extractWinners(results) : [];
-  console.log(data);
+
   const newWaifuData = data.map((waifu) => {
     return {
       ...waifu,
       round: findWaifuRound(waifu.id, winners),
     };
   });
-  console.log(newWaifuData);
+
   const finalWaifuData = newWaifuData.map((waifu) => {
     return {
       ...waifu,
