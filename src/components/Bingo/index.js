@@ -28,7 +28,7 @@ export default function Bingo({ data, ...props }) {
             }}
           >
             {!item.status
-              ? item.id !== 0
+              ? item.id !== 0 && item.seed !== 0
                 ? `Top ${2 ** (9 - item.round)}`
                 : `Não qualificada`
               : ``}

@@ -1,6 +1,6 @@
 import Main from "./pages";
 import Navbar from "./components/Navbar";
-import { hololiveData, edsonData } from "./data.js";
+import data from "./data";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import bracketService from "./services";
 import { useState, useEffect } from "react";
@@ -26,7 +26,7 @@ function App() {
         <Route exact path="/">
           <Main
             person="exemplo"
-            data={hololiveData}
+            data={data.hololive}
             results={bracketData[0]}
             currentRound={bracketData[1]}
             loading={loading}
@@ -35,7 +35,7 @@ function App() {
         <Route exact path="/edson">
           <Main
             person="Edson"
-            data={edsonData}
+            data={data.edson}
             results={bracketData[0]}
             currentRound={bracketData[1]}
             loading={loading}
@@ -62,7 +62,7 @@ function App() {
         <Route exact path="/lailson">
           <Main
             person="Lailson"
-            data={[]}
+            data={data.lailson}
             results={bracketData[0]}
             currentRound={bracketData[1]}
             loading={loading}
