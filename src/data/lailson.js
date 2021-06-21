@@ -136,7 +136,7 @@ const lailson = [
     id: 217184,
     seed: 5,
     name: "Ai Hayasaka",
-    url: "https://i.imgur.com/gEZKNu2.jpg",
+    url: "https://i.imgur.com/F6vDSXC.jpeg",
     personalRank: 25,
   },
   {
