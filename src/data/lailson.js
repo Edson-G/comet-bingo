@@ -156,18 +156,21 @@ const lailson = [
   {
     id: 217412,
     seed: 11,
+    name: "Violet Evergarden",
     url: "https://i.imgur.com/PBN4XgQ.jpg",
     personalRank: 21,
   },
   {
     id: 217737,
     seed: 207,
+    name: "Tomori Nao",
     url: "https://i.imgur.com/nzwACuq.jpg",
     personalRank: 20,
   },
   {
     id: 217008,
     seed: 37,
+    name: "Nishimiya Shouko",
     url: "https://i.imgur.com/wNKoN5f.png",
     personalRank: 13,
   },
