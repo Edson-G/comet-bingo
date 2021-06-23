@@ -22,9 +22,11 @@ export default function Score({ data, currentRound, ...props }) {
           </div>
         );
       })}
-      <div>
-        {scoreArray.reduce((prev, next) => (prev.total += next.total)).total}
-      </div>
+      <h2>
+        {`Pontuação final: ${
+          scoreArray.reduce((prev, next) => (prev.total += next.total)).total
+        }`}
+      </h2>
     </>
   );
 }
