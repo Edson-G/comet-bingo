@@ -20,11 +20,14 @@ function App({
       round: findWaifuRound(waifu.id, winners),
     };
   });
-  const finalWaifuData = newWaifuData.map((waifu) => {
+  const midWaifuData = newWaifuData.map((waifu) => {
     return {
       ...waifu,
       status: (waifu.seed && waifu.round >= currentRound - 1) || demo,
     };
+  });
+  const finalWaifuData = midWaifuData.map((waifu) => {
+    return { ...waifu, round: waifu.status ? currentRound : waifu.round };
   });
 
   return (
