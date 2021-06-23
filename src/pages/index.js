@@ -4,7 +4,15 @@ import List from "../components/List";
 import Score from "../components/Score";
 import extractWinners from "../helpers/extractWinners";
 import findWaifuRound from "../helpers/findWaifuRound";
-function App({ person, data, loading, results, currentRound, ...props }) {
+function App({
+  person,
+  data,
+  loading,
+  results,
+  currentRound,
+  demo = false,
+  ...props
+}) {
   const winners = results ? extractWinners(results) : [];
 
   const newWaifuData = data.map((waifu) => {
@@ -13,13 +21,10 @@ function App({ person, data, loading, results, currentRound, ...props }) {
       round: findWaifuRound(waifu.id, winners),
     };
   });
-
   const finalWaifuData = newWaifuData.map((waifu) => {
     return {
       ...waifu,
-      status:
-        waifu.seed &&
-        (waifu.round >= currentRound || (currentRound === 1 && waifu.id !== 0)),
+      status: (waifu.seed && waifu.round >= currentRound) || demo,
     };
   });
 
@@ -32,10 +37,14 @@ function App({ person, data, loading, results, currentRound, ...props }) {
               <h1>Bingo de {person}</h1>
               <Bingo data={[...finalWaifuData]} />
             </div>
-            <div>
-              <h1>Pontuação</h1>
-              <Score />
-            </div>
+            {!demo ? (
+              <div>
+                <h1>Pontuação</h1>
+                <Score />
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
           <div>
             <h1>Top 25</h1>

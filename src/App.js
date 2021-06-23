@@ -30,6 +30,7 @@ function App() {
             results={bracketData[0]}
             currentRound={bracketData[1]}
             loading={loading}
+            demo={true}
           />
         </Route>
         <Route exact path="/edson">
