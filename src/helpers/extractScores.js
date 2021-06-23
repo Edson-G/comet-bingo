@@ -85,7 +85,7 @@ const extractScores = (data, currentRound) => {
       row: rowAcc,
       col: colAcc,
       diagonal: diag,
-      total: rowAcc + colAcc + diag,
+      total: rowAcc + colAcc + diag + indiv,
     };
   };
 
