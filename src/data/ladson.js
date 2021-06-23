@@ -56,7 +56,7 @@ const ladson = [
     personalRank: 8,
   },
   {
-    id: 218988,
+    id: 216912,
     seed: 29,
     name: "Matoi Ryuuko",
     url: "https://i.imgur.com/sXNzxHt.png",
@@ -84,7 +84,7 @@ const ladson = [
     personalRank: 17,
   },
   {
-    id: 219432,
+    id: 217082,
     seed: 2,
     name: "Emilia",
     url: "https://i.imgur.com/4LwqsPy.png",
@@ -168,7 +168,7 @@ const ladson = [
     personalRank: 25,
   },
   {
-    id: 2171984,
+    id: 217184,
     seed: 5,
     name: "Ai Hayasaka",
     url: "https://i.imgur.com/F40KPz3.png",
