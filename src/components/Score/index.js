@@ -6,7 +6,6 @@ export default function Score({ data, currentRound, ...props }) {
   return (
     <>
       {scoreArray.map((roundScore, index, array) => {
-        console.log(array.length);
         return (
           <div key={`round-score-${index}`}>
             <h4>{`Resultados ${
@@ -22,10 +21,18 @@ export default function Score({ data, currentRound, ...props }) {
           </div>
         );
       })}
+      {/* TIL - array.reduce apparently mutates the array.*/}
       <h2>
         {`Pontuação final: ${
-          scoreArray.reduce((prev, next) => (prev.total += next.total)).total
+          scoreArray.reduce((prev, next) => (prev.total += next.total)) -
+          scoreArray[scoreArray.length - 1].total
         }`}
+      </h2>
+      <h2>
+        {`Pontuação esperada: ${scoreArray.reduce(
+          (prev, next) =>
+            (prev.total += next.total) - scoreArray[scoreArray.length - 1].total
+        )}`}
       </h2>
     </>
   );
