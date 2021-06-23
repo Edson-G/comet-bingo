@@ -37,10 +37,10 @@ function App({
               <h1>Bingo de {person}</h1>
               <Bingo data={[...finalWaifuData]} />
             </div>
-            {!demo ? (
+            {!demo && data.length > 0 ? (
               <div>
                 <h1>Pontuação</h1>
-                <Score />
+                <Score data={[...finalWaifuData]} currentRound={currentRound} />
               </div>
             ) : (
               <></>
