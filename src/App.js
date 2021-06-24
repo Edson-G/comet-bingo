@@ -72,7 +72,7 @@ function App() {
         <Route exact path="/joba">
           <Main
             person="Joba"
-            data={[]}
+            data={data.joba}
             results={bracketData[0]}
             currentRound={bracketData[1]}
             loading={loading}
