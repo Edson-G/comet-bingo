@@ -14,6 +14,7 @@ function App({
   ...props
 }) {
   const winners = results ? extractWinners(results) : [];
+  console.log(winners);
   const newWaifuData = data.map((waifu) => {
     return {
       ...waifu,
@@ -23,7 +24,7 @@ function App({
   const midWaifuData = newWaifuData.map((waifu) => {
     return {
       ...waifu,
-      status: (waifu.seed && waifu.round >= currentRound - 1) || demo,
+      status: (waifu.seed && waifu.round >= currentRound) || demo,
     };
   });
   const finalWaifuData = midWaifuData.map((waifu) => {

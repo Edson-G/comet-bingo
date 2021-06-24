@@ -88,7 +88,6 @@ const extractScores = (data, currentRound) => {
       total: rowAcc + colAcc + diag + indiv,
     };
   };
-  console.log(getRoundScore(scoringData, 2));
   let scoreArray = [];
   for (let round = 1; round <= currentRound; round++) {
     scoreArray = [...scoreArray, getRoundScore(scoringData, round)];
