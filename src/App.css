@@ -2,3 +2,7 @@
   display: flex;
   justify-content: center;
 }
+
+body {
+  background: linear-gradient(to right, #090e14, #243953, #090e14);
+}

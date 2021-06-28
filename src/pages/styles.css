@@ -26,7 +26,18 @@
   justify-content: space-around;
 }
 
-@media only screen and (max-width: 850px) {
+.user-bingo-card,
+.user-score-card,
+.user-top-card {
+  margin: 2vmin;
+  padding: 0 3vmin 3vmin 3vmin;
+  border-radius: 2vmin;
+  box-shadow: 0vmin 1vmin 3vmin black;
+  background-color: white;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1230px) {
   .bingo-div {
     width: auto;
     flex-direction: column;

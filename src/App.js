@@ -1,6 +1,7 @@
 import Main from "./pages";
 import Navbar from "./components/Navbar";
 import data from "./data";
+import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import bracketService from "./services";
 import { useState, useEffect } from "react";
@@ -45,7 +46,7 @@ function App() {
         <Route exact path="/gabriel">
           <Main
             person="Gabriel"
-            data={[]}
+            data={data.gabriel}
             results={bracketData[0]}
             currentRound={bracketData[1]}
             loading={loading}
@@ -81,7 +82,7 @@ function App() {
         <Route exact path="/willian">
           <Main
             person="Willian"
-            data={[]}
+            data={data.willian}
             results={bracketData[0]}
             currentRound={bracketData[1]}
             loading={loading}

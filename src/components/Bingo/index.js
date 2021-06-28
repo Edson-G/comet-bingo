@@ -22,17 +22,7 @@ export default function Bingo({ data, ...props }) {
             rank={item.personalRank}
             onDragStart={(e) => e.preventDefault()}
           />
-          <p
-            style={{
-              fontSize: 25,
-              margin: 0,
-              textAlign: "center",
-              position: "absolute",
-
-              bottom: 0,
-              color: "white",
-            }}
-          >
+          <p className="bingo-status">
             {!item.status
               ? item.id !== 0 && item.seed !== 0
                 ? finalsText[2 ** (9 - item.round)] ||

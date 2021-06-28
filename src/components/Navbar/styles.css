@@ -1,4 +1,46 @@
 .nav {
+  background: white;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 3rem;
+  height: 3.35rem;
+}
+
+.link,
+.logo-link {
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 10%;
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+
+.logo-div {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-link {
+  top: 0;
+  width: 3.14rem;
+}
+
+.logo {
+  height: 3.14rem;
+}
+
+.link:hover {
+  background: #476fa0;
+  color: black;
+}
+
+.active-link {
+  background: #375374;
+  color: white;
+  font-weight: bold;
 }

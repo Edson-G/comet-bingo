@@ -35,12 +35,12 @@ function App({
       {!loading ? (
         <div className="content">
           <div className="bingo-div">
-            <div>
+            <div className="user-bingo-card">
               <h1>Bingo de {person}</h1>
               <Bingo data={[...finalWaifuData]} />
             </div>
             {!demo && data.length > 0 ? (
-              <div>
+              <div className="user-score-card">
                 <h1>Pontuação</h1>
                 <Score data={[...finalWaifuData]} currentRound={currentRound} />
               </div>
@@ -48,7 +48,7 @@ function App({
               <></>
             )}
           </div>
-          <div>
+          <div className="user-top-card">
             <h1>Top 25</h1>
             <List data={[...finalWaifuData]} />
           </div>

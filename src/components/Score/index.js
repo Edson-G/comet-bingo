@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css";
 import extractScores from "../../helpers/extractScores";
 
 export default function Score({ data, currentRound, ...props }) {
@@ -16,16 +17,17 @@ export default function Score({ data, currentRound, ...props }) {
       {scoreArray.map((roundScore, index, array) => {
         return (
           <div key={`round-score-${index}`}>
-            <h4>{`Resultados ${
+            <h4 className="results-title">{`Resultados ${
               index + 1 === array.length ? `parciais ` : ``
             }da ${index + 1}ª Rodada:`}</h4>
-            <ul>
+            <ul className="results-list">
               <li>{`Posições: ${roundScore.individual} pontos`}</li>
               <li>{`Linhas: ${roundScore.row} pontos`}</li>
               <li>{`Colunas: ${roundScore.col} pontos`}</li>
               <li>{`Diagonais: ${roundScore.diagonal} pontos`}</li>
               <li>{`Total: ${roundScore.total} pontos`}</li>
             </ul>
+            <hr class="solid" />
           </div>
         );
       })}

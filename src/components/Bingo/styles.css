@@ -2,8 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  width: 85vmin;
-  height: 85vmin;
+  width: 70vmin;
+  height: 70vmin;
   margin: 10px;
   border-color: black;
   border-style: solid;
@@ -26,4 +26,18 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.bingo-status {
+  font-size: 25px;
+  margin: 0px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  .bingo-status {
+    font-size: 3vw;
+  }
 }
