@@ -3,7 +3,6 @@ import extractScores from "../../helpers/extractScores";
 
 export default function Score({ data, currentRound, ...props }) {
   const scoreArray = extractScores(data, currentRound);
-  console.log(scoreArray);
   const finalValue =
     scoreArray.reduce(
       (prev, next) => {

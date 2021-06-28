@@ -14,7 +14,6 @@ function App({
   ...props
 }) {
   const winners = results ? extractWinners(results) : [];
-  console.log(winners);
   const newWaifuData = data.map((waifu) => {
     return {
       ...waifu,
