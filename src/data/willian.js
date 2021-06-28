@@ -31,7 +31,7 @@ const willian = [
     id: 217028,
     seed: 47,
     name: "Iroha Isshiki",
-    url: "https://i.imgur.com/U7KmI7T.png",
+    url: "https://i.imgur.com/U7KmI7Tb.png",
     personalRank: 10,
   },
   {
@@ -143,7 +143,7 @@ const willian = [
     id: 217184,
     seed: 5,
     name: "Ai Hayasaka",
-    url: "https://i.imgur.com/F6vDSXCm.jpeg",
+    url: "https://i.imgur.com/F6vDSXCb.jpeg",
     personalRank: 9,
   },
   {
