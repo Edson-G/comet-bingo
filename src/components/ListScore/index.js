@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import extractListScores from "../../helpers/extractListScores";
+// import extractListScores from "../../helpers/extractListScores";
 
 export default function ListScore({ data, currentRound, ...props }) {
   // const scoreArray = extractListScores(data, currentRound);

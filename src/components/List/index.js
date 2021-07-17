@@ -1,5 +1,5 @@
 import React from "react";
-import extractListScores from "../../helpers/extractListScores";
+// import extractListScores from "../../helpers/extractListScores";
 import "./styles.css";
 
 export default function List({ data, currentRound, ...props }) {
