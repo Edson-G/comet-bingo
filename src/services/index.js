@@ -20,7 +20,7 @@ const rounds = async () => {
 const currentRound = async () => {
   const response = await api.get(`/rounds/${contest}`);
   if (response.data) return response.data[1].tier;
-  return 0;
+  return 9;
 };
 
 const bracketService = {

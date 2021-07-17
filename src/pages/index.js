@@ -4,6 +4,7 @@ import List from "../components/List";
 import Score from "../components/Score";
 import extractWinners from "../helpers/extractWinners";
 import findWaifuRound from "../helpers/findWaifuRound";
+import ListScore from "../components/ListScore";
 function App({
   person,
   data,
@@ -50,7 +51,8 @@ function App({
           </div>
           <div className="user-top-card">
             <h1>Top 25</h1>
-            <List data={[...finalWaifuData]} />
+            <List data={[...finalWaifuData]} currentRound={currentRound} />
+            <ListScore data={[...finalWaifuData]} currentRound={currentRound} />
           </div>
         </div>
       ) : (

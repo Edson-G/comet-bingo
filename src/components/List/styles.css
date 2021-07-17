@@ -7,7 +7,7 @@
 }
 .list-item {
   position: relative;
-  height: 50px;
+  height: 75px;
   width: 85vmin;
   display: flex;
   background-color: gainsboro;
@@ -22,8 +22,8 @@
 }
 
 .list-image {
-  width: 50px;
-  height: 50px;
+  min-width: 75px;
+  height: 75px;
   object-fit: cover;
 }
 .list-item-rank {
@@ -35,6 +35,17 @@
   background-size: cover;
   padding: 0 3px;
 }
+.list-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .list-item-name {
+  font-weight: bold;
+  margin: 0;
+  margin-left: 3px;
+}
+.list-item-score {
+  margin: 0;
   margin-left: 3px;
 }

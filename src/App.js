@@ -7,6 +7,7 @@ import bracketService from "./services";
 import { useState, useEffect } from "react";
 
 function App() {
+  //TODO - REMOVE HARD CODED FINAL RESULTS
   const [loading, setLoading] = useState(true);
   const [bracketData, setBracketData] = useState([]);
   useEffect(
