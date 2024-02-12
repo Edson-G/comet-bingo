@@ -4,8 +4,6 @@ This is an old project that i made for fun. It's essentially a highly personal v
 
 Looking back into it, this project was really fun and it's actually a better project than i remember. Yeah, the layout is kind of weird, especially on really large or small breakpoints, but i thought that 2021 me was way worse than that.
 
-This project is hosted on vercel, you can acesss the following link to see it live: https://comet-bingo.vercel.app/
-
 If you want to run this project locally... for some reason... here are the envionment variables. I don't know why they're environment variables in the first place so here you go. I don't have access to any other backend environment and the contest url is certainly not a sensitive piece of data, so i'll likely change it to plain constants whenever i feel like doing so.
 
 ```env
